@@ -11,9 +11,7 @@ function map(value, sourceMin, sourceMax, destMin, destMax) {
 }
 
 function map2(value, sourceMin, sourceMax, destMin, destMax, percent) {
-  return percent <= 0.5
-    ? map(value, sourceMin, sourceMax, destMin, destMax)
-    : map(value, sourceMin, sourceMax, destMax, destMin);
+  return map(value, sourceMin, sourceMax, destMin, destMax);
 }
 
 function fisheye(el) {

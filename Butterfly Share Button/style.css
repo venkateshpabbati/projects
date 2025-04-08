@@ -36,8 +36,8 @@ body {
   font-size: 50px;
   color: transparent;
   background: linear-gradient(45deg, #a58fe9, #e37682);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .hexagon:before,
