@@ -2,6 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodePen - CSS Only Cubes Hover Effects</title>
   <link rel="stylesheet" href="./style.css">
 
@@ -10,54 +11,54 @@
 <!-- partial:index.partial.html -->
 <div class="container">
 	<div class="cube">
-		<div style="--x:-1; --y:0;">
-			<span style="--i:3;"></span>
-			<span style="--i:2;"></span>
-			<span style="--i:1;"></span>
+		<div class="cube-face-left">
+			<span class="cube-span" data-i="3"></span>
+			<span class="cube-span" data-i="2"></span>
+			<span class="cube-span" data-i="1"></span>
 		</div>
-		<div style="--x:0; --y:0;">
-			<span style="--i:3;"></span>
-			<span style="--i:2;"></span>
-			<span style="--i:1;"></span>
+		<div class="cube-face" data-x="0" data-y="0">
+			<span class="cube-span-style-3"></span>
+			<span class="cube-span-style-2"></span>
+			<span class="cube-span-style-1"></span>
 		</div>
-		<div style="--x:1; --y:0;">
-			<span style="--i:3;"></span>
-			<span style="--i:2;"></span>
-			<span style="--i:1;"></span>
-		</div>
-	</div>
-	<div class="cube">
-		<div style="--x:-1; --y:0;">
-			<span style="--i:3;"></span>
-			<span style="--i:2;"></span>
-			<span style="--i:1;"></span>
-		</div>
-		<div style="--x:0; --y:0;">
-			<span style="--i:3;"></span>
-			<span style="--i:2;"></span>
-			<span style="--i:1;"></span>
-		</div>
-		<div style="--x:1; --y:0;">
-			<span style="--i:3;"></span>
-			<span style="--i:2;"></span>
-			<span style="--i:1;"></span>
+		<div class="cube-face-right">
+			<span class="cube-span-style-3"></span>
+			<span class="cube-span-style-2"></span>
+			<span class="cube-span-i-1"></span>
 		</div>
 	</div>
 	<div class="cube">
-		<div style="--x:-1; --y:0;">
-			<span style="--i:3;"></span>
-			<span style="--i:2;"></span>
-			<span style="--i:1;"></span>
+		<div class="cube-face-left">
+			<span class="cube-span-style-i-3"></span>
+			<span class="cube-span-style-i-2"></span>
+			<span class="cube-span-style-i-1"></span>
 		</div>
-		<div style="--x:0; --y:0;">
-			<span style="--i:3;"></span>
-			<span style="--i:2;"></span>
-			<span style="--i:1;"></span>
+		<div class="cube-face-center">
+			<span class="cube-span-style-i-3"></span>
+			<span class="cube-span-style-i-2"></span>
+			<span class="cube-span-style-i-1"></span>
 		</div>
-		<div style="--x:1; --y:0;">
-			<span style="--i:3;"></span>
-			<span style="--i:2;"></span>
-			<span style="--i:1;"></span>
+		<div class="cube-face-right">
+			<span class="cube-span-style-i-3"></span>
+			<span class="cube-span-style-i-2"></span>
+			<span class="cube-span-style-i-1"></span>
+		</div>
+	</div>
+	<div class="cube">
+		<div class="cube-face-left">
+			<span class="cube-span-i-3"></span>
+			<span class="cube-span-i-2"></span>
+			<span class="cube-span-i-1"></span>
+		</div>
+		<div class="cube-face-center">
+			<span class="cube-span-i-3"></span>
+			<span class="cube-span-i-2"></span>
+			<span class="cube-span-i-1"></span>
+		</div>
+		<div class="cube-face-custom">
+			<span class="cube-span-custom-3"></span>
+			<span class="cube-span-custom-2"></span>
+			<span class="cube-span-custom-1"></span>
 		</div>
 	</div>
 </div>

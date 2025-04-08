@@ -31,14 +31,12 @@ p.text {
 .sub-div {
   max-height: 100vh;
   overflow-y: scroll;
-  /*Thumb color and background color for firefox */
-  scrollbar-color: #00c6ff #242942;
-  overflow-x: none;
+  overflow-x: hidden;
 }
 /*  ::-webkit- is for chrome */
 ::-webkit-scrollbar {
   width: 1.2em;
-  overflow-x: none;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar-track {
   background-color: #242942;
@@ -47,7 +45,7 @@ p.text {
 }
 ::-webkit-scrollbar-thumb {
   background: #00c6ff;
-  background: -webkit-linear-gradient(to right, #00c6ff, #0072ff);
+  background: -webkit-linear-gradient(left, #00c6ff, #0072ff);
   background: linear-gradient(to right, #00c6ff, #0072ff);
   border-radius: 0.3em;
 }

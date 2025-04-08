@@ -7,18 +7,13 @@
 }
 body {
   font-family: sans-serif;
-}
-a {
-  text-decoration: none;
-  color: #fff;
-}
-body {
   background: rgb(238, 174, 202);
   background: radial-gradient(
     circle,
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
+/* Removed duplicate body selector */
 }
 .container {
   height: 100vh;
@@ -33,6 +28,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 30px #8a817c;
+  background-color: #fbfefb;
 }
 .theme-toggler {
   position: absolute;
@@ -70,6 +66,7 @@ body {
   font-size: 30px;
   margin-bottom: 20px;
   overflow-x: scroll;
+  white-space: nowrap;
 }
 #display::-webkit-scrollbar {
   display: block;
@@ -84,16 +81,14 @@ button {
   font-size: 20px;
   cursor: pointer;
   transition: all 200ms ease;
+  overflow: hidden;
 }
 button:hover {
   transform: scale(1.1);
 }
 button#equal {
   height: 130px;
-}
 /* light theme */
-.calculator {
-  background-color: #fbfefb;
 }
 .calculator #display {
   color: #0a1e23;
