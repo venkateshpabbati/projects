@@ -14,6 +14,15 @@ function map2(value, sourceMin, sourceMax, destMin, destMax, percent) {
   return map(value, sourceMin, sourceMax, destMin, destMax);
 }
 
+function escapeHtml(unsafe) {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 function fisheye(el) {
   let text = el.innerText.trim(),
     numberOfChars = text.length;
@@ -23,7 +32,7 @@ function fisheye(el) {
     text
       .split("")
       .map(c => {
-        return c === " " ? "&nbsp;" : c;
+        return c === " " ? "&nbsp;" : escapeHtml(c);
       })
       .join("</span><span>") +
     "</span>";
