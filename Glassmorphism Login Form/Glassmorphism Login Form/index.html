@@ -2,6 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodePen - Glassmorphism Login form</title>
   <link rel="stylesheet" href="./style.css">
 
@@ -15,23 +16,23 @@
         <h2>Login</h2>
         <div class="inputbox">
           <ion-icon name="mail-outline"></ion-icon>
-          <input type="email" required>
+          <input type="email" required placeholder="Enter your email" title="Email">
           <label for="">Email</label>
         </div>
         <div class="inputbox">
           <ion-icon name="lock-closed-outline"></ion-icon>
-          <input type="password" required>
+          <input type="password" required placeholder="Enter your password" title="Password">
           <label for="">Password</label>
         </div>
         <div class="forget">
-          <label>
-            <input type="checkbox"> Remember me
+          <label for="remember-me">
+            <input type="checkbox" id="remember-me"> Remember me
           </label>
-          <label>
-            <a href="#">Forgot password?</a>
+          <label for="forgot-password">
+            <a id="forgot-password" href="#">Forgot password?</a>
           </label>
         </div>
-        <button>Log in</button>
+        <button type="submit">Log in</button>
         <div class="register">
           <p>Don't have a account ? <a href="#">Register</a></p>
         </div>

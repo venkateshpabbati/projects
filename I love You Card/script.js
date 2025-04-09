@@ -2,8 +2,8 @@
 
   hljs.highlightAll();
 
-  var Confetti = function (options) {
-    var t = this;
+  const Confetti = function (options) {
+    const t = this;
     t.o = options || {};
 
 
@@ -40,20 +40,19 @@
 
 
   Confetti.prototype.handleOptions = function () {
-    var t = this;
+    let t = this;
 
     if (t.o.target) {
       t.doms.target = t.o.target;
     } else {
-      throw 'Confetti.options.target - is not valid DOM element';
-      return false;
+      throw new Error('Confetti.options.target - is not valid DOM element');
     }
 
-    if (!!t.o.onstart) {
+    if (t.o.onstart) {
       t.callbacks.onstart = t.o.onstart;
     }
 
-    if (!!t.o.ondone) {
+    if (t.o.ondone) {
       t.callbacks.ondone = t.o.ondone;
     }
 
@@ -61,13 +60,14 @@
   };
 
   Confetti.prototype.setupElements = function () {
-    var t = this,
+    let t = this,
     containerDOM = document.createElement('div'),
     targetPosition = t.doms.target.style.position;
 
     containerDOM.className = t.classes['confettiContainer'];
 
-    if (targetPosition != 'relative' || targetPosition != 'absolute') {
+    const isPositionValid = targetPosition === 'relative' || targetPosition === 'absolute';
+    if (!isPositionValid) {
       t.doms.target.style.position = 'relative';
     }
 
@@ -76,41 +76,43 @@
   };
 
   Confetti.prototype.getContainerSize = function () {
-    var t = this;
+    let t = this;
 
     return Math.floor(Math.random() * t.vars.confettiSizeRange[0]) + t.vars.confettiSizeRange[1] + 'px';
   };
 
   Confetti.prototype.getConfettiColor = function () {
-    var t = this;
+    let t = this;
 
     return t.vars.confettiColors[Math.floor(Math.random() * t.vars.confettiColors.length)];
   };
 
 
   Confetti.prototype.getConfettiSpeed = function () {
-    var t = this;
+    let t = this;
 
     return t.vars.confettiSpeed[Math.floor(Math.random() * t.vars.confettiSpeed.length)];
   };
 
 
   Confetti.prototype.getConfettiPosition = function () {
-    var t = this;
+    let t = this;
 
     return Math.floor(Math.random() * t.doms.target.offsetWidth) + 'px';
   };
 
-  Confetti.prototype.generateConfetti = function () {var _confettiDOM$classLis, _confettiDOM$classLis2;
-    var t = this,
+  Confetti.prototype.generateConfetti = function () {
+    let t = this,
     confettiDOM = document.createElement('div'),
     confettiSize = t.getContainerSize(),
     confettiBackground = t.getConfettiColor(),
     confettiLeft = t.getConfettiPosition(),
     confettiSpeed = t.getConfettiSpeed();
 
-    confettiDOM === null || confettiDOM === void 0 ? void 0 : (_confettiDOM$classLis = confettiDOM.classList) === null || _confettiDOM$classLis === void 0 ? void 0 : _confettiDOM$classLis.add('confetti');
-    confettiDOM === null || confettiDOM === void 0 ? void 0 : (_confettiDOM$classLis2 = confettiDOM.classList) === null || _confettiDOM$classLis2 === void 0 ? void 0 : _confettiDOM$classLis2.add('confetti-animation-' + confettiSpeed);
+    if (confettiDOM?.classList) {
+      confettiDOM.classList.add('confetti');
+      confettiDOM.classList.add('confetti-animation-' + confettiSpeed);
+    }
     confettiDOM.style.left = confettiLeft;
     confettiDOM.style.width = confettiSize;
     confettiDOM.style.height = confettiSize;
@@ -124,7 +126,7 @@
   };
 
   Confetti.prototype.renderConfetti = function () {
-    var t = this;
+    let t = this;
 
     if (t.callbacks.onstart) {
       t.callbacks.onstart();
@@ -148,7 +150,7 @@
   };
 
   Confetti.prototype.restart = function (instance) {
-    var t = this || instance;
+    let t = this || instance;
     t.vars.confetiCount = 0;
     t.renderConfetti();
   };
@@ -156,13 +158,13 @@
   Confetti.prototype.start = Confetti.prototype.restart;
 
   Confetti.prototype.stop = function () {
-    var t = this || instance;
+    let t = this || instance;
     t.vars.confetiCount = t.vars.confetiLimit;
   };
 
 
   Confetti.prototype.init = function () {
-    var t = this;
+    let t = this;
 
     t.setupElements();
   };
@@ -216,20 +218,5 @@
     card.addEventListener("mousemove", handleHover);
     card.addEventListener("mouseleave", resetStyles);
   }
-
-
-  new Granim({
-    element: '#gradient',
-    direction: 'radial',
-    isPausedWhenNotInView: true,
-    states: {
-      "default-state": {
-        gradients: [
-        ['#ff8faf', '#ffe5ed'],
-        ['#f38fff', '#ffe5ed'],
-        ['#ff8f8f', '#ffe5ed']] } } });
-
-
-
-
+  // Removed unused Granim instantiation
 })();

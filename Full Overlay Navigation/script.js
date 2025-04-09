@@ -1,6 +1,6 @@
 function menuToggle() {
-    var nav = document.getElementById("nav")
-    var toggle = document.getElementById("toggle")
+    let nav = document.getElementById("nav")
+    let toggle = document.getElementById("toggle")
     nav.classList.toggle("active")
     toggle.classList.toggle("active")
 }
