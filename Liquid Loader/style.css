@@ -1,88 +1,72 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
   margin: 0;
-
   padding: 0;
-
   box-sizing: border-box;
+}
 
-  font-family: "Poppins";
-
+body {
+  font-family: "Poppins", sans-serif;
   font-size: 10px;
+  background: linear-gradient(45deg, #006bc6, #1ecafc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-  width: 100%;
-
-  min-height: 100vh;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
-  background: linear-gradient(45deg, #006bc6, #1ecafc);
+  position: relative;
 }
 
 .loader {
   position: relative;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
 }
 
 .loader h2 {
   position: absolute;
-
   color: #fff;
-
   font-size: 2.5rem;
-
   font-weight: 500;
-
   animation: animateText 5s ease-in-out infinite;
 }
 
-.loader .drops {
+.drops {
   position: relative;
-
   width: 300px;
-
   height: 300px;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   filter: url(#Gooey);
 }
 
-.loader .drops span {
+.drop {
   position: absolute;
-
   left: 0;
-
-  transform-origin: 150px;
-
   width: 100px;
-
   height: 100px;
-
   background: #fff;
-
   border-radius: 50%;
-
+  transform-origin: 150px;
   animation: animateDrops 5s ease-in-out infinite;
-
-  animation-delay: calc(0.15s * var(--i));
 }
+
+.drop[data-index="0"] { animation-delay: calc(0.15s * 0); }
+.drop[data-index="1"] { animation-delay: calc(0.15s * 1); }
+.drop[data-index="2"] { animation-delay: calc(0.15s * 2); }
+.drop[data-index="3"] { animation-delay: calc(0.15s * 3); }
+.drop[data-index="4"] { animation-delay: calc(0.15s * 4); }
+.drop[data-index="5"] { animation-delay: calc(0.15s * 5); }
+.drop[data-index="6"] { animation-delay: calc(0.15s * 6); }
+.drop[data-index="7"] { animation-delay: calc(0.15s * 7); }
 
 @keyframes animateDrops {
   0% {
@@ -90,15 +74,13 @@
     height: 100px;
     transform: rotate(0deg) translateX(120px);
   }
-  40%,
-  70% {
+  40%, 70% {
     width: 40px;
     height: 40px;
     transform: rotate(calc(360deg / 8 * var(--i)));
     box-shadow: 0 0 0 10px #fff;
   }
-  90%,
-  100% {
+  90%, 100% {
     width: 100px;
     height: 100px;
     transform: rotate(0deg) translateX(120px);
@@ -109,12 +91,10 @@
   0% {
     opacity: 0;
   }
-  40%,
-  70% {
+  40%, 70% {
     opacity: 1;
   }
-  90%,
-  100% {
+  90%, 100% {
     opacity: 0;
   }
 }

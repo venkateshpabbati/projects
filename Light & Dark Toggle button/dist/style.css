@@ -1,23 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #fff;
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
   min-height: 100vh;
-  margin: 0;
-  transition: background 0.2s linear;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark {background-color: #292c35;} /* #9b59b6 */
+body.dark {
+  background-color: #292c35;
+  color: #fff;
+}
 
-body.dark h1, body.dark .support a {color: #fff;}
+h1 {
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.toggle-container {
+  position: relative;
+}
 
 .checkbox {
   opacity: 0;
@@ -29,27 +43,33 @@ body.dark h1, body.dark .support a {color: #fff;}
   width: 50px;
   height: 26px;
   border-radius: 50px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 5px;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
 }
 
-.fa-moon {color: #f1c40f;}
+.fa-moon {
+  color: #f1c40f;
+  font-size: 14px;
+}
 
-.fa-sun {color: #f39c12;}
+.fa-sun {
+  color: #f39c12;
+  font-size: 14px;
+}
 
 .checkbox-label .ball {
   background-color: #fff;
   width: 22px;
   height: 22px;
   position: absolute;
-  left: 2px;
   top: 2px;
+  left: 2px;
   border-radius: 50%;
-  transition: transform 0.2s linear;
+  transition: transform 0.3s ease;
 }
 
 .checkbox:checked + .checkbox-label .ball {
