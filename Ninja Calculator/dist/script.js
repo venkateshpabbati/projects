@@ -8,7 +8,7 @@ const calculate = (btnValue) => {
   display.focus();
   if (btnValue === "=" && output !== "") {
     //If output has '%', replace with '/100' before evaluating.
-    output = eval(output.replace("%", "/100"));
+    output = eval(output.replace(/%/g, "/100"));
   } else if (btnValue === "AC") {
     output = "";
   } else if (btnValue === "DEL") {
