@@ -1,6 +1,43 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Demo of a Scroll to Top button using HTML, CSS, and JavaScript.">
+    <meta name="keywords" content="scroll, back to top, JavaScript, Bootstrap, accessibility">
+    <title>Scroll to Top Demo</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="container my-5">
+      <h1>Scroll</h1>
+      <h2>Back to Top Button</h2>
+      <h3>Scroll down the page</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, ac tincidunt nisi nisl eu nunc.</p>
+      <!-- Add more content as needed to enable scrolling -->
+      <div style="height: 1500px;"></div>
+    </main>
+
+    <button id="scrollTopBtn" aria-label="Scroll to top" class="btn btn-primary rounded-circle shadow" type="button">
+      <i class="fas fa-angle-up fa-lg"></i>
+    </button>
+
+    <!-- Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- jQuery (if needed, but this example is pure JS) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script> -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
+<!-- <!doctype html>
+<html lang="en">
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -101,4 +138,4 @@ btn.on('click', function(e) {
    
    
   </body>
-</html>
+</html> -->
