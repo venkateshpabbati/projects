@@ -1,4 +1,24 @@
-  @import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese');
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1050;
+  width: 48px;
+  height: 48px;
+  font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Show button when active */
+#scrollTopBtn.show {
+  display: flex;
+}
+
+/* old version
+
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese');
 
   body{background-color: #1f2029 !important;
   	margin:0;
@@ -39,7 +59,7 @@
 }
 
 /* Styles for the content section */
-
+/*
 .content {
   width: 77%;
   margin: 50px auto;
@@ -84,45 +104,4 @@ h1{
 p{
   color:#b5b5b5;
    font-size:16px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} */
